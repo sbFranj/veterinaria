@@ -7,6 +7,7 @@ const Layout = () => {
         <Link to="/veterinarios">Veterinarios</Link>
         <Link to="/addVeterinario">Añadir Veterinario</Link>
         <Link to="/veterinario">Buscar Veterinario</Link>
+        <Link to="/registro">Registro</Link>
       </nav>
       <Outlet />
     </>
