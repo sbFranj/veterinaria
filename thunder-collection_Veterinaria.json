@@ -1,0 +1,1445 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Veterinaria",
+    "dateExported": "2023-11-27T08:53:10.532Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "animales",
+            "containerId": "",
+            "created": "2023-11-20T07:08:55.949Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "ficha",
+            "containerId": "",
+            "created": "2023-11-20T07:08:55.950Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "veterinario",
+            "containerId": "",
+            "created": "2023-11-20T07:08:55.951Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "dce91830-a201-4d9e-8db7-380e5093f707",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "getAnimalCorrectId",
+            "url": "/animales/655b1b1261311026c088dcda",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-20T07:08:55.949Z",
+            "modified": "2023-11-23T10:55:00.357Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "414eaf16-a4f1-4076-8ff5-40248fd40708",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "getAnimalIncorrectId",
+            "url": "/animales/a",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-20T07:08:55.951Z",
+            "modified": "2023-11-20T07:08:55.951Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "d92d0765-fd4b-44ed-ae39-373d93615d20",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "getAnimales",
+            "url": "/animales",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-20T07:08:55.952Z",
+            "modified": "2023-11-23T10:52:25.024Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "15649f88-b1ac-4e04-87d0-4734ac686e00",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "postAnimal",
+            "url": "/animales",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-20T07:08:55.953Z",
+            "modified": "2023-11-23T10:55:31.350Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest2\",\n  \"age\":2,\n  \"especie\":\"ejemplo2\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "5b4039ee-4b90-4907-bdfd-2d2d6d9333d6",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "postAnimalSinNombre",
+            "url": "/animales",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-11-20T07:08:55.954Z",
+            "modified": "2023-11-20T07:08:55.954Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"age\":2,\n  \"especie\":\"ejemplo\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "300fd217-3069-40cb-b276-1552546312a4",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "getVeterinarios",
+            "url": "/veterinarios",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-11-20T07:08:55.964Z",
+            "modified": "2023-11-20T07:08:55.964Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "752eb151-6da4-442b-bd16-5a7ff05ffd9e",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "postAnimalSinEdad",
+            "url": "/animales",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-11-20T07:08:55.955Z",
+            "modified": "2023-11-20T07:08:55.955Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest\",\n  \n  \"especie\":\"ejemplo\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "8b6b23d6-6900-4be0-aa63-cadd37be9b27",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "getVeterinario",
+            "url": "/veterinarios/655e40fa8c984115c0a98a0b",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-11-20T07:08:55.965Z",
+            "modified": "2023-11-27T07:35:58.796Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "cfe2732d-54a8-442d-a484-e2b1d011ef43",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "postAnimalSinEspecie",
+            "url": "/animales",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-11-20T07:08:55.956Z",
+            "modified": "2023-11-20T07:08:55.956Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest\",\n  \"age\":2\n  \n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "a8583f76-6269-478b-8b8e-df668f66d3b6",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "getVeterinarioIncorrectId",
+            "url": "/veterinarios/a",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-11-20T07:08:55.966Z",
+            "modified": "2023-11-23T11:21:55.969Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "ef65bfa5-0981-4cea-99c4-351d37bf7a78",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "postVeterinario",
+            "url": "/veterinarios",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-11-20T07:08:55.967Z",
+            "modified": "2023-11-27T08:48:55.906Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Enrique\",\n  \"age\":27,\n  \"telefono\":654321322\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "a95c5504-b3d0-4434-b7e1-66889af584e1",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "postAnimalEdadNoEsNumero",
+            "url": "/animales",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-11-20T07:08:55.957Z",
+            "modified": "2023-11-20T07:08:55.957Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest\",\n  \"age\":\"a\",\n  \"especie\":\"ejemplo\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "2d9edf00-dd08-4894-9b83-7c36db850c03",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "postVeterinarioSinNombre",
+            "url": "/veterinarios",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-11-20T07:08:55.968Z",
+            "modified": "2023-11-20T07:08:55.968Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"age\":30,\n  \"telefono\":999666999\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "268fb1da-9093-430b-b55c-e96678eadf83",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "getFichas",
+            "url": "/fichas",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-11-20T07:08:55.981Z",
+            "modified": "2023-11-20T07:08:55.981Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "055cad36-4e82-45f1-aa1b-0337e283d9f4",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "putAnimalName",
+            "url": "/animales/655b1b1261311026c088dcda",
+            "method": "PUT",
+            "sortNum": 75000,
+            "created": "2023-11-20T07:08:55.960Z",
+            "modified": "2023-11-23T10:56:34.403Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTestmod\",\n  \"age\":5,\n  \"especie\":\"ejemplo\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "3acfd116-29be-4658-b1cf-a60c2c1e2fb6",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "putAnimalAge",
+            "url": "/animales/655b1b1261311026c088dcda",
+            "method": "PUT",
+            "sortNum": 77500,
+            "created": "2023-11-20T07:08:55.961Z",
+            "modified": "2023-11-23T10:56:59.662Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest\",\n  \"age\":22,\n  \"especie\":\"ejemplo\"\n \n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "9acd5b1b-e990-4940-b3ee-04214331b3c3",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "putAnimalEspecie",
+            "url": "/animales/655b1b1261311026c088dcda",
+            "method": "PUT",
+            "sortNum": 78750,
+            "created": "2023-11-20T07:08:55.962Z",
+            "modified": "2023-11-23T10:58:51.330Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest\",\n  \"age\":2,\n  \"especie\":\"ejemplomod\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "3816335b-2ad9-4a19-8e0d-493948eff413",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "putAnimalSinId",
+            "url": "/animales/",
+            "method": "PUT",
+            "sortNum": 79687.5,
+            "created": "2023-11-20T07:08:55.963Z",
+            "modified": "2023-11-20T08:46:46.310Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest\",\n  \"age\":2,\n  \"especie\":\"ejemplo\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                }
+            ]
+        },
+        {
+            "_id": "47341d07-7584-472a-b917-e24a8ae2c62d",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "putAnimalEdadNoEsNumero",
+            "url": "/animales/655b1b1261311026c088dcda",
+            "method": "PUT",
+            "sortNum": 79843.8,
+            "created": "2023-11-20T07:08:55.973Z",
+            "modified": "2023-11-23T10:59:37.545Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"nombreTest\",\n  \"age\":\"a\",\n  \"especie\":\"ejemplo\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "5e7f274a-a6a7-4687-ac1f-4fca5aeaa9af",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "deleteAnimal",
+            "url": "/animales/655f2fa31ad505744c36c361",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-11-20T07:08:55.958Z",
+            "modified": "2023-11-23T11:00:09.666Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "204"
+                }
+            ]
+        },
+        {
+            "_id": "364e0b3d-fb17-484d-932b-c57442e64719",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "postVeterinarioSinEdad",
+            "url": "/veterinarios",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-11-20T07:08:55.969Z",
+            "modified": "2023-11-20T07:08:55.969Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"ejemploNombre\",\n  \n  \"telefono\":999666999\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "682cafcb-1c73-48de-85e3-daab40d2e7f1",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "getFicha",
+            "url": "/fichas/655e3c33b6093953a0934316",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-11-20T07:08:55.982Z",
+            "modified": "2023-11-23T11:01:13.498Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "fa6b02a5-95af-40ad-8bc4-0dc89b69e099",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "3e4b7d6d-5514-4669-94fb-31ec165c8d46",
+            "name": "deleteAnimalIncorrectId",
+            "url": "/animales/a",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-11-20T07:08:55.959Z",
+            "modified": "2023-11-20T07:08:55.959Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "81cfcc52-adfd-43d6-b338-cf8c99082b67",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "postVeterinarioSinTelefono",
+            "url": "/veterinarios",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2023-11-20T07:08:55.970Z",
+            "modified": "2023-11-20T07:08:55.970Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "\n{\n  \"name\":\"ejemploNombre\",\n  \"age\":30\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "fca03295-b215-4fd7-823e-6ac7af3894e7",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "getFichaIncorrectId",
+            "url": "/fichas/a",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-11-20T07:08:55.983Z",
+            "modified": "2023-11-23T11:02:31.352Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "33813b58-33ad-4e53-be8b-ec277ed07c2c",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "postVeterinarioEdadNoEsNumero",
+            "url": "/veterinarios",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-11-20T07:08:55.971Z",
+            "modified": "2023-11-20T07:08:55.971Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"ejemploNombre\",\n  \"age\":\"a\",\n  \"telefono\":999666999\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "19ed633d-9ae7-4b52-862b-2931a692b538",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "postFicha",
+            "url": "/fichas",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-11-20T07:08:55.984Z",
+            "modified": "2023-11-23T11:04:16.943Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"ejemploDolencia\",\n  \"idAnimal\":\"655b1c0f61311026c088dce5\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "5d39cd89-60ee-40a2-bdec-11a3534936a6",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "postVeterinarioTelefonoNoEsNumero",
+            "url": "/veterinarios",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-11-20T07:08:55.972Z",
+            "modified": "2023-11-20T07:08:55.972Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"ejemploNombre\",\n  \"age\":30,\n  \"telefono\":\"a\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "35b3b6f3-1cf8-4208-9242-82764c0f12ca",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "postFichaSinHistorial",
+            "url": "/fichas",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-11-20T07:08:55.985Z",
+            "modified": "2023-11-23T11:05:54.714Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n\n  \"dolencias\":\"ejemploDolencia\",\n  \"idAnimal\":\"655b1c0f61311026c088dce5\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "56ce9c80-4af2-4c01-a961-5619a6507867",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "putVeterinarioNombre",
+            "url": "/veterinarios/6564587f29a946ebd16e1c2e",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2023-11-20T07:08:55.974Z",
+            "modified": "2023-11-27T08:51:32.108Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Manolo2\",\n  \"age\":30,\n  \"telefono\":654321322\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "2e4b5597-1291-4049-abff-3ccd6adf51ec",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "postFichaSinDolencias",
+            "url": "/fichas",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-11-20T07:08:55.986Z",
+            "modified": "2023-11-23T11:06:35.804Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"idAnimal\":\"655b1c0f61311026c088dce5\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "24b0c962-bcf7-4da3-b4b6-3b7c2b1640ec",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "putVeterinarioEdad",
+            "url": "/veterinarios/655f35e533175acf019c3fa6",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2023-11-20T07:08:55.975Z",
+            "modified": "2023-11-23T11:28:14.991Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n\"name\":\"Antonio\",\n  \"age\":33,\n  \"telefono\":999666999\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "9f027280-bf71-4a47-9dba-ea2d57e00cf9",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "postFichaSinIdAnimal",
+            "url": "/fichas",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2023-11-20T07:08:55.987Z",
+            "modified": "2023-11-23T11:07:11.359Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"ejemploDolencia\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "1b5c6f0e-c4ec-4202-abdd-cb3fd4bd777f",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "putVeterinarioTelefono",
+            "url": "/veterinarios/656450fbfb2243ed39167008",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2023-11-20T07:08:55.976Z",
+            "modified": "2023-11-27T08:19:34.269Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Antonio\",\n  \"age\":30,\n  \"telefono\":654321321\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "210a0fe2-ce4c-4d7b-87ac-950623312c1d",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "postFichaSinIdVeterinario",
+            "url": "/fichas",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2023-11-20T07:08:55.988Z",
+            "modified": "2023-11-23T11:07:31.210Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"ejemploDolencia\",\n  \"idAnimal\":\"655b1c0f61311026c088dce5\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "b7c61a7f-beb4-4857-82c3-50c14cbdc7c7",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "putVeterinarioEdadNoEsNumero",
+            "url": "/veterinarios/655f35e533175acf019c3fa6",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2023-11-20T07:08:55.977Z",
+            "modified": "2023-11-23T11:28:57.973Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Antonio\",\n  \"age\":\"a\",\n  \"telefono\":999666999\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "bd5eeb98-09c5-43eb-9919-087f49df0e50",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "postFichaIdAnimaNoEsMongoId",
+            "url": "/fichas",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2023-11-20T07:08:55.989Z",
+            "modified": "2023-11-23T11:08:17.700Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"ejemploDolencia\",\n  \"idAnimal\":\"655b1c0f61311026c\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "27e27932-b9d7-414d-9eab-4c1eff467a78",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "putVeterinarioTelefonoNoEsNumero",
+            "url": "/veterinarios/655f35e533175acf019c3fa6",
+            "method": "PUT",
+            "sortNum": 160000,
+            "created": "2023-11-20T07:08:55.978Z",
+            "modified": "2023-11-23T11:29:12.181Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Antonio\",\n  \"age\":30,\n  \"telefono\":\"a\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "73273893-2021-469e-9931-f39cfef8b5eb",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "postFichaIdVeterinarioNoEsNumero",
+            "url": "/fichas",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2023-11-20T07:08:55.990Z",
+            "modified": "2023-11-23T11:08:34.309Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"ejemploDolencia\",\n  \"idAnimal\":\"655b1c0f61311026c088dce5\",\n  \"idVeterinario\":\"655b1b1261311026c0\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "cb7c088b-0cf7-4b63-a54e-138fefea8b22",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "delVeterinario",
+            "url": "/veterinarios/656447fd85fc077d9f4a9be0",
+            "method": "DELETE",
+            "sortNum": 170000,
+            "created": "2023-11-20T07:08:55.979Z",
+            "modified": "2023-11-27T08:04:35.390Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "204"
+                }
+            ]
+        },
+        {
+            "_id": "d6eafa00-7bb3-4b4c-91ac-a1a934689dae",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "putFichaHistorial",
+            "url": "/fichas/655e3c33b6093953a0934316",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2023-11-20T07:08:55.991Z",
+            "modified": "2023-11-23T11:09:13.639Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"mod\",\n  \"dolencias\":\"ejemploDolencia\",\n  \"idAnimal\":\"655b1c0f61311026c088dce5\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "9f4bb54f-79eb-4314-9b34-ee3a64ea4d57",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "62d48f33-4c2f-4dfc-81b0-76f88f0fe13a",
+            "name": "delVeterinarioFail",
+            "url": "/veterinarios/a",
+            "method": "DELETE",
+            "sortNum": 180000,
+            "created": "2023-11-20T07:08:55.980Z",
+            "modified": "2023-11-20T07:08:55.980Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "8964c73c-66e7-4419-a240-5f9316504341",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "putFichaDolencias",
+            "url": "/fichas/655e3c33b6093953a0934316",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2023-11-20T07:08:55.992Z",
+            "modified": "2023-11-23T11:13:50.131Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"mod\",\n  \"idAnimal\":\"655b1c0f61311026c088dce5\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "ac146983-a001-422c-adc8-6c9e1a6cde3f",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "putFichaIdAnimal",
+            "url": "/fichas/655e3c33b6093953a0934316",
+            "method": "PUT",
+            "sortNum": 190000,
+            "created": "2023-11-20T07:08:55.993Z",
+            "modified": "2023-11-23T11:16:07.422Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"mod\",\n  \"idAnimal\":\"655b1b1261311026c088dcda\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "2f8657e6-357c-4910-9722-bc49c616d1da",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "putFichaIdAnimalNoEsMongoId",
+            "url": "/fichas/655e3c33b6093953a0934316",
+            "method": "PUT",
+            "sortNum": 195000,
+            "created": "2023-11-20T07:08:55.996Z",
+            "modified": "2023-11-23T11:17:06.156Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"mod\",\n  \"idAnimal\":\"88dcda\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "5c258d57-cfed-4b86-8d89-65db6f7d7e41",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "putFichaIdVeterinario",
+            "url": "/fichas/655e3c33b6093953a0934316",
+            "method": "PUT",
+            "sortNum": 200000,
+            "created": "2023-11-20T07:08:55.994Z",
+            "modified": "2023-11-23T11:17:44.116Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"mod\",\n  \"idAnimal\":\"655b1b1261311026c088dcda\",\n  \"idVeterinario\":\"655b1b1261311026c088dcda\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                }
+            ]
+        },
+        {
+            "_id": "1615892e-c8c2-44e4-9b90-3b11bfaf25ab",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "putFichaIdVeterinarioNoNumero",
+            "url": "/fichas/655e3c33b6093953a0934316",
+            "method": "PUT",
+            "sortNum": 210000,
+            "created": "2023-11-20T07:08:55.995Z",
+            "modified": "2023-11-23T11:18:13.183Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"historial\":\"DiaEjemplo, HoraEjemplo1, SintomasASimpleVistaEjemplo\",\n  \"dolencias\":\"mod\",\n  \"idAnimal\":\"655b1b1261311026c088dcda\",\n  \"idVeterinario\":\"655b1b1261311026c088dcdb\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        },
+        {
+            "_id": "47e3569c-f511-42b0-8054-d6f7a8b2a88b",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "delFicha",
+            "url": "/fichas/655f31b01ad505744c36c36a",
+            "method": "DELETE",
+            "sortNum": 220000,
+            "created": "2023-11-20T07:08:55.997Z",
+            "modified": "2023-11-23T11:18:48.766Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "7b3f5f8e-fbf1-4519-a2c0-febde5d313e5",
+            "colId": "4b5fa9a0-ef90-4464-b9f8-9aea61bb5dfa",
+            "containerId": "9cd6ff46-5db8-48b3-9b7f-ccfb131bed09",
+            "name": "delFichaIncorrectId",
+            "url": "/fichas/a",
+            "method": "DELETE",
+            "sortNum": 230000,
+            "created": "2023-11-20T07:08:55.998Z",
+            "modified": "2023-11-23T11:20:16.065Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                }
+            ]
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:3000"
+        }
+    }
+}
